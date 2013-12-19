@@ -15,9 +15,11 @@ module StreetAddressExt
   end
 
   def normalize address
+    return nil unless address
     address = address.dup
     capitialize 'street', address
     capitialize 'city', address
+    remove_period 'prefix', address
     address.state = nil
     address.postal_code = nil
     address.postal_code_ext = nil
@@ -30,5 +32,11 @@ module StreetAddressExt
     }.join(' '))
   end
 
+  def remove_period method, address
+    item = address.send method
+    if item
+      address.send "#{method}=", item.gsub('.','')
+    end
+  end
 
 end
