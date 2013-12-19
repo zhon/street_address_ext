@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["zhon@xputah.org"]
   spec.description   = %q{TODO: Write a gem description}
   spec.summary       = %q{TODO: Write a gem summary}
-  spec.homepage      = ""
+  spec.homepage      = "github.com/zhon/street-address-filter"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)
@@ -18,6 +18,12 @@ Gem::Specification.new do |spec|
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
   spec.require_paths = ["lib"]
 
+  spec.add_dependency 'StreetAddress'
+
   spec.add_development_dependency "bundler", "~> 1.3"
   spec.add_development_dependency "rake"
+  spec.add_development_dependency "rr"
+  spec.add_development_dependency "guard"
+  spec.add_development_dependency "guard-minitest"
+  spec.add_development_dependency "minitest"
 end
