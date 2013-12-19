@@ -1,8 +1,8 @@
-require "street_address_filter/version"
+require "street_address_ext/version"
 
 require 'street_address'
 
-module StreetAddressFilter
+module StreetAddressExt
 
   class Parser
 

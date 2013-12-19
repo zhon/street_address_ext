@@ -1,4 +1,4 @@
-# StreetAddressFilter
+# StreetAddressExt
 
 TODO: Write a gem description
 
@@ -6,7 +6,7 @@ TODO: Write a gem description
 
 Add this line to your application's Gemfile:
 
-    gem 'street_address_filter'
+    gem 'street_address_ext'
 
 And then execute:
 
@@ -14,7 +14,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install street_address_filter
+    $ gem install street_address_ext
 
 
 ## Usage

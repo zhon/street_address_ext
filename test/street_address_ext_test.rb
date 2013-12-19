@@ -1,9 +1,9 @@
 require_relative 'helper'
 
-require 'street_address_filter'
+require 'street_address_ext'
 
-include StreetAddressFilter
-describe StreetAddressFilter do
+include StreetAddressExt
+describe StreetAddressExt do
 
   describe 'parse' do
     before do

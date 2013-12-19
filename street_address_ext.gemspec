@@ -1,16 +1,16 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'street_address_filter/version'
+require 'street_address_ext/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "street_address_filter"
+  spec.name          = "street_address_ext"
   spec.version       = StreetAddressFilter::VERSION
   spec.authors       = ["zhon"]
   spec.email         = ["zhon@xputah.org"]
   spec.description   = %q{TODO: Write a gem description}
   spec.summary       = %q{TODO: Write a gem summary}
-  spec.homepage      = "github.com/zhon/street-address-filter"
+  spec.homepage      = "github.com/zhon/street_address_ext"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)
