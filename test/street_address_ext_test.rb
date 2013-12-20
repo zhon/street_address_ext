@@ -75,6 +75,14 @@ describe StreetAddressExt do
       normalize(address).to_s.must_equal text.gsub('.', '')
     end
 
+    it 'keeps Unit after Direction' do
+      text = '256 W 350 N Unit B, Vernal'
+      address = parse text
+      normalize(address).to_s.must_equal text
+    end
+
+
+
   end
 
 end

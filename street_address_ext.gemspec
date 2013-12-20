@@ -8,9 +8,9 @@ Gem::Specification.new do |spec|
   spec.version       = StreetAddressFilter::VERSION
   spec.authors       = ["zhon"]
   spec.email         = ["zhon@xputah.org"]
-  spec.description   = %q{TODO: Write a gem description}
-  spec.summary       = %q{TODO: Write a gem summary}
-  spec.homepage      = "github.com/zhon/street_address_ext"
+  spec.description   = %q{#{spec.summary}}
+  spec.summary       = %q{Extend StreetAddress}
+  spec.homepage      = "https://github.com/zhon/street_address_ext"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)

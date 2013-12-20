@@ -17,6 +17,7 @@ module StreetAddressExt
   def normalize address
     return nil unless address
     address = address.dup
+    move_suffix_after_street address
     capitialize 'street', address
     capitialize 'city', address
     remove_period 'prefix', address
@@ -36,6 +37,13 @@ module StreetAddressExt
     item = address.send method
     if item
       address.send "#{method}=", item.gsub('.','')
+    end
+  end
+
+  def move_suffix_after_street address
+    if address.suffix
+      address.street += " #{address.suffix}"
+      address.suffix = nil
     end
   end
 
