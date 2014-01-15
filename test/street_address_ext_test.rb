@@ -64,7 +64,7 @@ describe StreetAddressExt do
       address.city.must_equal 'Salt Lake City'
     end
 
-    it 'capitailizes city names' do
+    it 'capitailizes street names' do
       address = StreetAddress::US.parse '1 RED BIRCH Ln, SALT LAKE CITY, UT'
       normalize(address).street.must_equal 'Red Birch'
     end
