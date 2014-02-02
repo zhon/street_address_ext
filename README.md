@@ -1,6 +1,6 @@
 # StreetAddressExt
 
-StreetAddresExt is a thin wrapper around gem [street-address](https://github.com/derrek/street-address)
+``StreetAddresExt`` is a thin wrapper around gem [street-address](https://github.com/derrek/street-address)
 
 In fact, parse returns a ``StreetAddress::US::Address``
 
@@ -14,17 +14,23 @@ with
 
 ## Installation
 
-Add this line to your application's Gemfile:
+Add this line to your application's ``Gemfile``:
 
-    gem 'street_address_ext'
+```ruby
+gem 'street_address_ext'
+```
 
 And then execute:
 
-    $ bundle
+```bash
+$ bundle
+```
 
 Or install it yourself as:
 
-    $ gem install street_address_ext
+```bash
+$ gem install street_address_ext
+```
 
 
 ## Usage
@@ -38,7 +44,7 @@ StreetAddressExt.parse(address_string).to_s #=> "84 Beacon St, Boston"
 
 ## Dependencies
 
-StreetAddress gem
+[StreetAddress](https://github.com/derrek/street-address)
 
 ## Contributing
 
