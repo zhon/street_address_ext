@@ -1,6 +1,16 @@
 # StreetAddressExt
 
-TODO: Write a gem description
+StreetAddress is a thin wrapper around gem (street-address)[https://github.com/derrek/street-address]
+
+In fact, it gives you StreetAddress::Address
+
+with
+
+ - state and postal codes removed
+ - street and city capitalized
+ - suffix in correct position see (this issue)[https://github.com/derrek/street-address/issues/9]
+
+
 
 ## Installation
 
@@ -19,7 +29,12 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```ruby
+require 'street_address_ext'
+
+address_string = "84 Beacon St., Boston MA"
+StreetAddressExt.parse(address_string).to_s #=> "84 Beacon St, Boston"
+```
 
 ## Dependencies
 

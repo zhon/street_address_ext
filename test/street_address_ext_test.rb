@@ -12,6 +12,16 @@ describe StreetAddressExt do
       @parser.parse(text).class.must_equal StreetAddress::US::Address
     end
 
+    it 'calls normalize' do
+      mock(@parser).normalize.with_any_args
+      @parser.parse '84 Beacon St., Boston MA'
+    end
+
+    it "returns nil if it can't parse" do
+      text = 'not a street address'
+      @parser.parse(text).must_equal nil
+    end
+
     it 'handles address missing state' do
       text = '1111 N 250 W, Harrisville'
       parse(text).to_s.must_equal text

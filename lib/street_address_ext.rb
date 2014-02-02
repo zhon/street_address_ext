@@ -11,7 +11,7 @@ module StreetAddressExt
       address = StreetAddress::US.parse("#{text},UT")
       address.state = nil if address
     end
-    address
+    normalize address if address
   end
 
   def normalize address
