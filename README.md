@@ -1,8 +1,8 @@
 # StreetAddressExt
 
-``StreetAddresExt`` is a thin wrapper around gem [street-address](https://github.com/derrek/street-address)
+``StreetAddresExt`` is a thin wrapper around the [street-address](https://github.com/derrek/street-address) gem
 
-In fact, parse returns a ``StreetAddress::US::Address``
+In fact, parse returns a modified ``StreetAddress::US::Address``
 
 with
 
