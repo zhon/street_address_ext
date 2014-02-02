@@ -16,6 +16,6 @@ Features
   - Removes state
   - Removes postal code
   - Capitializes city, street
-  - Suffix comes after street ((this)[https://github.com/derrek/street-address/issues/9])
+  - Suffix comes after street ([this](https://github.com/derrek/street-address/issues/9))
   - Removes period from prefix
 

@@ -1,6 +1,6 @@
 # StreetAddressExt
 
-StreetAddress is a thin wrapper around gem (street-address)[https://github.com/derrek/street-address]
+StreetAddress is a thin wrapper around gem [street-address](https://github.com/derrek/street-address)
 
 In fact, it gives you StreetAddress::Address
 
@@ -8,7 +8,7 @@ with
 
  - state and postal codes removed
  - street and city capitalized
- - suffix in correct position see (this issue)[https://github.com/derrek/street-address/issues/9]
+ - suffix in correct position see [this issue](https://github.com/derrek/street-address/issues/9)
 
 
 
