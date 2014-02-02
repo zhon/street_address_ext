@@ -4,13 +4,11 @@
 
 ``StreetAddresExt`` is a thin wrapper around the [street-address](https://github.com/derrek/street-address) gem
 
-In fact, parse returns a modified ``StreetAddress::US::Address``
-
-with
+In fact, ``parse`` returns a modified ``StreetAddress::US::Address``
 
  - state and postal codes removed
  - street and city capitalized
- - suffix in correct position see [this issue](https://github.com/derrek/street-address/issues/9)
+ - suffix in correct position (see this [issue](https://github.com/derrek/street-address/issues/9))
 
 
 
@@ -25,13 +23,13 @@ gem 'street_address_ext'
 And then execute:
 
 ```bash
-$ bundle
+bundle
 ```
 
 Or install it yourself as:
 
 ```bash
-$ gem install street_address_ext
+gem install street_address_ext
 ```
 
 
