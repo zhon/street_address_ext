@@ -1,3 +1,18 @@
+0.0.3 (2014-02-24)
+------------------
+
+Bugs
+====
+
+- Removed Suffix Street modification
+- Address.street no longer contains suffix
+
+Features
+========
+
+- to_s places suffix after street
+
+
 0.0.2 (2014-02-02)
 ------------------
 

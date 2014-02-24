@@ -9,6 +9,7 @@ In fact, ``parse`` returns a modified ``StreetAddress::US::Address``
  - state and postal codes removed
  - street and city capitalized
  - suffix in correct position (see this [issue](https://github.com/derrek/street-address/issues/9))
+ - removes periods from prefix
 
 
 
