@@ -2,6 +2,42 @@ require "street_address_ext/version"
 
 require 'street_address'
 
+module StreetAddress
+  class US
+    class Address
+
+      def line1(s = "")
+        if intersection?
+          s += prefix + " " unless prefix.nil?
+          s += street
+          s += " " + street_type unless street_type.nil?
+          s += " " + suffix unless suffix.nil?
+          s += " and"
+          s += " " + prefix2 unless prefix2.nil?
+          s += " " + street2
+          s += " " + street_type2 unless street_type2.nil?
+          s += " " + suffix2 unless suffix2.nil?
+        else
+          s += number
+          s += " " + prefix unless prefix.nil?
+          s += " " + street unless street.nil?
+          s += " " + street_type unless street_type.nil?
+          s += " " + suffix unless suffix.nil?
+          if( !unit_prefix.nil? && !unit.nil? )
+            s += " " + unit_prefix
+            s += " " + unit
+          elsif( unit_prefix.nil? && !unit.nil? )
+            s += " #" + unit
+          end
+        end
+
+        return s
+      end
+
+    end
+  end
+end
+
 module StreetAddressExt
   extend self
 
@@ -17,7 +53,6 @@ module StreetAddressExt
   def normalize address
     return nil unless address
     address = address.dup
-    move_suffix_after_street address
     capitialize 'street', address
     capitialize 'city', address
     remove_period 'prefix', address
@@ -37,13 +72,6 @@ module StreetAddressExt
     item = address.send method
     if item
       address.send "#{method}=", item.gsub('.','')
-    end
-  end
-
-  def move_suffix_after_street address
-    if address.suffix
-      address.street += " #{address.suffix}"
-      address.suffix = nil
     end
   end
 

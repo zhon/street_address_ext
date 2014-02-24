@@ -49,6 +49,20 @@ describe StreetAddressExt do
 
   end
 
+  describe 'StreetAddress::US::Address' do
+
+    describe 'to_s' do
+
+      it 'places suffix before unit' do
+        text = '75 E 80 N Suite 202, American Fork'
+        addr = parse(text)
+        addr.to_s.must_equal text
+      end
+
+    end
+
+  end
+
   describe 'normalize' do
 
     before do
@@ -90,7 +104,6 @@ describe StreetAddressExt do
       address = parse text
       normalize(address).to_s.must_equal text
     end
-
 
 
   end
