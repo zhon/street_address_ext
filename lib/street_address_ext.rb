@@ -42,7 +42,7 @@ module StreetAddressExt
   extend self
 
   def parse text
-    text = strip_country text.trim
+    text = strip_country text.strip
     address = StreetAddress::US.parse(text)
     unless address
       address = StreetAddress::US.parse("#{text},UT")
