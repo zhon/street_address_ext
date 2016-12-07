@@ -2,6 +2,11 @@
 Current
 -------
 
+0.0.5 (2016-12-7)
+-----------------
+
+Fix bug where "".trim was called instead of "".strip
+
 0.0.4 (2016-12-7)
 -----------------
 
