@@ -27,6 +27,11 @@ describe StreetAddressExt do
       parse(text).to_s.must_equal text
     end
 
+    it 'removes United States' do
+      text = '3120 WEST 1200 NORTH, WEST POINT, Utah 84015 United States '
+      parse(text).to_s.must_equal "3120 W 1200 N, West Point"
+    end
+
     #it 'handles aka first address is valid' do
       #skip
       #text = '2286 West 1445 North aka 1459 North 2275 West, Clinton, UT'

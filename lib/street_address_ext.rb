@@ -42,12 +42,17 @@ module StreetAddressExt
   extend self
 
   def parse text
+    text = strip_country text.trim
     address = StreetAddress::US.parse(text)
     unless address
       address = StreetAddress::US.parse("#{text},UT")
       address.state = nil if address
     end
     normalize address if address
+  end
+
+  def strip_country text
+    return text.sub(/(?:(?:United States)|USA)$/, '')
   end
 
   def normalize address
