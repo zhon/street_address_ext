@@ -2,6 +2,9 @@
 Current
 -------
 
+0.0.4 (2016-12-7)
+-----------------
+
 Upgrade to StreetAddres 1.0.6 (2.0 has not been released)
 
 Remove trailing 'United States' or 'USA'
