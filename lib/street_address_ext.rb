@@ -58,8 +58,8 @@ module StreetAddressExt
   def normalize address
     return nil unless address
     address = address.dup
-    capitialize 'street', address
-    capitialize 'city', address
+    capitalize 'street', address
+    capitalize 'city', address
     remove_period 'prefix', address
     address.state = nil
     address.postal_code = nil
@@ -67,8 +67,10 @@ module StreetAddressExt
     address
   end
 
-  def capitialize method, address
-    address.send(method+'=', address.send(method).split(/\s+/).map { |item|
+  def capitalize method, address
+    s = address.send(method)
+    return unless s
+    address.send(method+'=', s.split(/\s+/).map { |item|
       item.capitalize
     }.join(' '))
   end

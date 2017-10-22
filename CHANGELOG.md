@@ -2,6 +2,13 @@
 Current
 -------
 
+0.0.6 (2017-10-21)
+-----------------
+
+Nil City do longer crashes.
+Spell capitalize correctly.
+Upgrade rr, guard, guard-minitest
+
 0.0.5 (2016-12-7)
 -----------------
 

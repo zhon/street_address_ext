@@ -113,4 +113,13 @@ describe StreetAddressExt do
 
   end
 
+  describe 'capitalize' do
+
+    it 'does not throw on nil city' do
+      text = '11 horse thief lane superior WY 82945'
+      address = parse text
+    end
+
+  end
+
 end
